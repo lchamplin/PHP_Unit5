@@ -35,6 +35,20 @@ CREATE TABLE Orders (
     PRIMARY KEY (id)
 );
 
+CREATE TABLE Users (
+    id int AUTO_INCREMENT,
+    first_name varchar(255),
+    last_name varchar(255),
+    password varchar(255),
+    email varchar(255),
+    role int, --1: customer service, 2: admin
+    PRIMARY KEY (id)
+);
+
+
+INSERT INTO Users (first_name, last_name, password, email, role) VALUES('Frodo', 'Baggins', 'fb', 'fb@mines.edu', 1);
+INSERT INTO Users (first_name, last_name, password, email, role) VALUES('Harry', 'Potter', 'hp', 'hp@mines.edu', 2);
+
 INSERT INTO Customer (first_name, last_name, email) VALUES('Mickey', 'Mouse', 'mmouse@mines.edu');
 INSERT INTO Customer (first_name, last_name, email) VALUES('Jordan', 'Ratliff', 'cwiggl3s@gmail.com');
 
