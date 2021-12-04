@@ -14,7 +14,7 @@
 
 
 </head>
-<body>
+<body onload="clearItems()">
 
 <form action="Unit5_process_order.php" method="post">
         <span>
@@ -34,7 +34,7 @@
     <legend>Product</legend>
                 <br>
       
-                <select id="product" name="product" required onchange="showImage()">
+                <select id="product" name="product" required onchange="showImage(); addToCookie($row['product_name']">
                         <option disabled selected hidden>Choose a product *</option>
                         <?php $Product = getProducts(getConnection()); ?>
                         <?php if ($Product): ?>
@@ -93,4 +93,42 @@
                         $('#submit').prop("disabled",false);
                         }
         }
+        // get the itemsViewed cookie. This will hold the list of items the user has viewed. NOTE: be sure you read about JSON parse etc. in the background info.
+        // if the currently selected item is not in the array, add it (see links in assignment writeup related to JS arrays)
+        // stringify the array and use setCookie to store it
+        function addToCookie(product){
+                arr = getCookie("itemsViewed");
+                if (!arr.includes(product)){
+                        arr.push(product);
+                        var json_str = JSON.stringify(arr);
+                        document.cookie = "itemsViewed=" + json_str
+                }
+        }
+
+        function getCookie(name) {
+                // Split cookie string and get all individual name=value pairs in an array
+                var cookieArr = document.cookie.split(";");
+                
+                // Loop through the array elements
+                for(var i = 0; i < cookieArr.length; i++) {
+                        var cookiePair = cookieArr[i].split("=");
+                        
+                        /* Removing whitespace at the beginning of the cookie name
+                        and compare it with the given string */
+                        if(name == cookiePair[0].trim()) {
+                        // Decode the cookie value and return
+                        return decodeURIComponent(cookiePair[1]);
+                        }
+                }
+                // Return null if not found
+                return null;
+        }
+
+
+        function clearItems(){
+                var arr = [];
+                var json_str = JSON.stringify(arr);
+                document.cookie = "itemsViewed=" + json_str
+        }
+
 </script>
