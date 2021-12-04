@@ -111,7 +111,7 @@ function findItems() {
 		for (let i = 0; i < arr.length-1; i++){
     			let li = document.createElement('li');
     			ul.appendChild(li);
-    			li.innerHTML += item;
+    			li.innerHTML += arr[i];
 		}
 	}
 }
