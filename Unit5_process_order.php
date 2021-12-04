@@ -93,7 +93,7 @@ if ($newCust==0) {
 </section>
 <p>We will send special offers to <?php echo $_POST['email']?><p>
 
-<div id="offers"></div>
+<div id="offers" style="color:blue">Based on your viewing history we'd like to offer 20% off these items:</div>
 
 </body>
 </html>
