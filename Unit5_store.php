@@ -91,7 +91,7 @@
                         $('#stock_text').text("");
                         $('#submit').prop("disabled",false);
                 }
-                print($("#product option:selected").attr('data-name'));
+                console.log($("#product option:selected").attr('data-name'));
                 addToCookie($("#product option:selected").attr('data-name'));
         }
         // get the itemsViewed cookie. This will hold the list of items the user has viewed. NOTE: be sure you read about JSON parse etc. in the background info.
