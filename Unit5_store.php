@@ -76,7 +76,6 @@
         function showImage() {
                 var imgName = $("#product option:selected").attr('data-image');
                 var stock = $("#product option:selected").attr('data-qty');
-                console.log(imgName, stock);
                 $('#picture').attr("src", "images/"+imgName.toString());
                 if (stock == 0){
                         $('#stock_text').text("OUT OF STOCK");
@@ -92,7 +91,8 @@
                         $('#stock_text').text("");
                         $('#submit').prop("disabled",false);
                 }
-                addToCookie($("#product option:selected").attr('data-name'))
+                print($("#product option:selected").attr('data-name'));
+                addToCookie($("#product option:selected").attr('data-name'));
         }
         // get the itemsViewed cookie. This will hold the list of items the user has viewed. NOTE: be sure you read about JSON parse etc. in the background info.
         // if the currently selected item is not in the array, add it (see links in assignment writeup related to JS arrays)
@@ -108,8 +108,10 @@
         }
 
         function getCookie(name) {
+                console.log("getCookie");
                 // Split cookie string and get all individual name=value pairs in an array
                 var cookieArr = document.cookie.split(";");
+                console.log(cookieArr);
                 
                 // Loop through the array elements
                 for(var i = 0; i < cookieArr.length; i++) {
