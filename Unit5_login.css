@@ -57,11 +57,17 @@ fieldset.login{
 #login{
         background-color: blue;
         padding: 5px;
-        width: fit-content;
+        padding-left: 10%;
+        padding-right: 10%;
 }
 
 #guest{
         background-color: pink;
         padding: 5px;
-        width: fit-content;
+        padding-left: 10%;
+        padding-right: 10%;
+}
+
+span{
+        display: inline;
 }
