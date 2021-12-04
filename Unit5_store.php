@@ -121,7 +121,7 @@
                         and compare it with the given string */
                         if(name == cookiePair[0].trim()) {
                                 // Decode the cookie value and return
-                                console.log(decodeURIComponent(cookiePair[1]));
+                                console.log(typeof decodeURIComponent(cookiePair[1]));
                                 return decodeURIComponent(cookiePair[1]);
                         }
                 }
