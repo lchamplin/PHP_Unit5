@@ -17,8 +17,8 @@
 
 <fieldset class="login">
                 <br>
-                E-mail: <input type="email" name="email" required><br>
-                First Name: <input type="text" name="password" required><br>
+                E-mail: <input type="email" name="email"><br>
+                First Name: <input type="text" name="password"><br>
                 <button id="login" type="submit">Login</button><br>
                 <span>
                 Remember me<input type="checkbox" name="inactive" id="inactive">
