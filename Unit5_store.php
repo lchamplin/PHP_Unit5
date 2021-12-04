@@ -107,11 +107,13 @@
 
         function removeItem(){
                 item = $("#product option:selected").attr('data-name');
+                console.log("remove", item);
                 arr = getCookie("itemsViewed");
                 if (arr.includes(product)){
                         arr.pop(product);
                         var json_str = JSON.stringify(arr);
                         document.cookie = "itemsViewed=" + json_str
+                        console.log(json_str);
                 }
 
         }
