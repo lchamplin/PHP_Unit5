@@ -12,7 +12,7 @@
 
 </head>
 <body>
-<p>Welcome! Please login or select Continue as Guest to begin. <?php echo err?></p> 
+<p>Welcome! Please login or select Continue as Guest to begin. <?php echo $_GET['err']?></p> 
 <form action="Unit5_login.php" method="post">
 
 <fieldset class="login">
