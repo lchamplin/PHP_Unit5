@@ -99,6 +99,7 @@
         // stringify the array and use setCookie to store it
         function addToCookie(product){
                 arr = getCookie("itemsViewed");
+                console.log(arr);
                 if (!arr.includes(product)){
                         arr.push(product);
                         var json_str = JSON.stringify(arr);
