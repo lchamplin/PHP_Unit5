@@ -12,7 +12,8 @@
 
 </head>
 <body>
-<p>Welcome! Please login or select Continue as Guest to begin. <?php if(1==1){echo $_GET['err']}?></p> 
+<p>Welcome! Please login or select Continue as Guest to begin.</p>
+<?php echo "<p>" . $_GET['err'] . "<p>"?> 
 <form action="Unit5_login.php" method="post">
 
 <fieldset class="login">
