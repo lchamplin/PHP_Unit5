@@ -34,7 +34,7 @@
     <legend>Product</legend>
                 <br>
       
-                <select id="product" name="product" required onchange="showImage(); addToCookie($row['product_name']">
+                <select id="product" name="product" required onchange="showImage(); addToCookie($row['product_name'])">
                         <option disabled selected hidden>Choose a product *</option>
                         <?php $Product = getProducts(getConnection()); ?>
                         <?php if ($Product): ?>
