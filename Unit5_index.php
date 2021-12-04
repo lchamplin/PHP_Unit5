@@ -13,15 +13,17 @@
 </head>
 <body>
 <p>Welcome! Please login or select Continue as Guest to begin.</p>
-<fieldset class="personal">
+<fieldset class="login">
                 <br>
                 E-mail: <input type="email" name="email" required><br>
                 First Name: <input type="text" name="password" required><br>
-                <button type="submit">Login</button><br>
-                Remember me<input type="checkbox" name="inactive" id="inactive"><br>
+                <button id="login" type="submit">Login</button><br>
+                <span>
+                Remember me<input type="checkbox" name="inactive" id="inactive">
                 <p>Forgot password?<p>
+                </span>
         </fieldset>
-        <a href="Unit5_store.php"><button style="background-color:pink">Continue As Guest</button></a>
+        <a href="Unit5_store.php"><button id="guest">Continue As Guest</button></a>
 
 
 

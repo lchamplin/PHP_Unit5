@@ -48,3 +48,20 @@ a{
         color: white;
 }
 
+fieldset.login{
+        background-color: gold;
+        border: 0.25vw red dashed;
+        width: fit-content;
+}
+
+#login{
+        background-color: blue;
+        padding: 5px;
+        width: fit-content;
+}
+
+#guest{
+        background-color: pink;
+        padding: 5px;
+        width: fit-content;
+}
