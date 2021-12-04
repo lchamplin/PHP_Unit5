@@ -114,6 +114,9 @@ function findItems() {
     			li.innerHTML += arr[i];
 		}
 	}
+	else{
+		document.getElementById("offers").innerHTML = "";
+	}
 }
 
 function getCookie(name) {
