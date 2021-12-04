@@ -55,14 +55,15 @@ fieldset.login{
 }
 
 #login{
+        color: white;
         background-color: blue;
-        padding-left: 10%;
-        padding-right: 10%;
+        padding-left: 20%;
+        padding-right: 20%;
 }
 
 #guest{
         background-color: pink;
-        padding: 5%;
+        padding: 2.5%;
         padding-left: 10%;
         padding-right: 10%;
         margin: 5px;
