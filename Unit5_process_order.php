@@ -108,7 +108,7 @@ function findItems() {
 	if(arr.length>1){
 		ul = document.createElement('ul');
 		document.getElementById('offers').appendChild(ul);
-		items.forEach(function (item) {
+		arr.forEach(function (item) {
     			let li = document.createElement('li');
     			ul.appendChild(li);
     			li.innerHTML += item;
