@@ -20,12 +20,10 @@
                 E-mail: <input type="email" name="email"><br>
                 First Name: <input type="text" name="password"><br>
                 <button id="login" type="submit">Login</button><br>
-                <span>
                 Remember me<input type="checkbox" name="inactive" id="inactive">
                 <p>Forgot password?<p>
-                </span>
         </fieldset>
-        <a href="Unit5_store.php"><button id="guest">Continue As Guest</button></a>
+        <a id="guess" href="Unit5_store.php">Continue as Guest</a>
 </form>
 
 
