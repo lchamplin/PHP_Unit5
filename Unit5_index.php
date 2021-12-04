@@ -13,7 +13,8 @@
 </head>
 <body>
 <p>Welcome! Please login or select Continue as Guest to begin.</p>
-<fieldset class="login">
+<div id="login">
+<fieldset class="login_button">
                 <br>
                 E-mail: <input type="email" name="email" required><br>
                 First Name: <input type="text" name="password" required><br>
@@ -24,7 +25,7 @@
                 </span>
         </fieldset>
         <a href="Unit5_store.php"><button id="guest">Continue As Guest</button></a>
-
+</div>
 
 
 </body>
