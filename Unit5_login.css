@@ -61,13 +61,13 @@ fieldset.login{
         padding-right: 20%;
 }
 
-#guest{
+a {
         background-color: pink;
-        padding: 2.5%;
-        padding-left: 10%;
-        padding-right: 10%;
-        margin: 5px;
-}
+        color: black;
+        padding: 1em 1.5em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
 
 .span{
         display: inline;
