@@ -99,7 +99,6 @@
         // stringify the array and use setCookie to store it
         function addToCookie(product){
                 arr = getCookie("itemsViewed");
-                console.log(typeof arr);
                 if (!arr.includes(product)){
                         arr.push(product);
                         var json_str = JSON.stringify(arr);
@@ -108,7 +107,6 @@
         }
 
         function getCookie(name) {
-                console.log("getCookie");
                 // Split cookie string and get all individual name=value pairs in an array
                 var cookieArr = document.cookie.split(";");
                 console.log(cookieArr);
@@ -121,7 +119,6 @@
                         and compare it with the given string */
                         if(name == cookiePair[0].trim()) {
                                 // Decode the cookie value and return
-                                console.log(JSON.parse(cookiePair[1]));
                                 return JSON.parse(cookiePair[1]);
                         }
                 }

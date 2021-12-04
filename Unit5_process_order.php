@@ -104,3 +104,13 @@ if ($newCust==0) {
 
  <?php include 'Unit5_footer.php';?>
 
+<script>
+findItems();
+
+function findItems() {
+	arr = <?php echo $_COOKIE['item']?>;
+	console.log(arr);
+}
+
+</script>
+
