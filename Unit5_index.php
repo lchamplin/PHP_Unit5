@@ -23,7 +23,7 @@
                 Remember me<input type="checkbox" name="inactive" id="inactive">
                 <p>Forgot password?<p>
         </fieldset>
-        <a id="guess" href="Unit5_store.php">Continue as Guest</a>
+        <a id="guest" href="Unit5_store.php">Continue as Guest</a>
 </form>
 
 

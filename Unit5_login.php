@@ -1,7 +1,6 @@
 <?php
-echo "Hello";
 // // Start the session
-// session_start();
+session_start();
 // // Set session variables
 // $_SESSION["role"] = 0;
 // $_SESSION["name"] = "";
