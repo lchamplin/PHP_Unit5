@@ -5,7 +5,7 @@ session_start();
 $_SESSION["role"] = 0;
 $_SESSION["password"] = "";
 
-if (empty($_POST['email'] || empty($_POST['password'])){
+if (empty($_POST['email']) || empty($_POST['password'])){
 //         header("Location: Unit5_index.php?err=Invalid User");
 }
 ?>
