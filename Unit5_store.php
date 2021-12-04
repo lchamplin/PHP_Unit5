@@ -57,7 +57,7 @@
                 </span>
         <input type="hidden" name="timestamp" value="<?php echo time(); ?>" required>
 </div>
-        <button id="submit" type="submit">Purchase</button>
+        <button id="submit" type="submit" onchange="removeItem()">Purchase</button>
 </span>
 
 </form>
@@ -91,7 +91,6 @@
                         $('#stock_text').text("");
                         $('#submit').prop("disabled",false);
                 }
-                console.log($("#product option:selected").attr('data-name'));
                 addToCookie($("#product option:selected").attr('data-name'));
         }
         // get the itemsViewed cookie. This will hold the list of items the user has viewed. NOTE: be sure you read about JSON parse etc. in the background info.
@@ -104,6 +103,17 @@
                         var json_str = JSON.stringify(arr);
                         document.cookie = "itemsViewed=" + json_str
                 }
+        }
+
+        function removeItem(){
+                item = $("#product option:selected").attr('data-name');
+                arr = getCookie("itemsViewed");
+                if (arr.includes(product)){
+                        arr.pop(product);
+                        var json_str = JSON.stringify(arr);
+                        document.cookie = "itemsViewed=" + json_str
+                }
+
         }
 
         function getCookie(name) {
