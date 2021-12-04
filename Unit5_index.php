@@ -11,10 +11,11 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
-<body>
-<p>Welcome! Please login or select Continue as Guest to begin.</p>
-<div id="login">
-<fieldset class="login_button">
+<body onload="checkErr()">
+<p id="message">Welcome! Please login or select Continue as Guest to begin.</p> 
+<form action="Unit5_login.php" method="post">
+
+<fieldset class="login">
                 <br>
                 E-mail: <input type="email" name="email" required><br>
                 First Name: <input type="text" name="password" required><br>
@@ -25,10 +26,22 @@
                 </span>
         </fieldset>
         <a href="Unit5_store.php"><button id="guest">Continue As Guest</button></a>
-</div>
+</form>
 
 
 </body>
 </html>
 
  <?php include 'Unit5_footer.php';?>
+
+<script>
+        function checkErr(){
+                error = $_GET['err'];
+                console.log(error);
+                if(error){
+                        $("#message").innerHTML+=("      "+error);
+                }
+
+        }
+
+</script>

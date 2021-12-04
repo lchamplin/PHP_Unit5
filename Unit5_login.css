@@ -54,7 +54,7 @@ fieldset.login{
         width: fit-content;
 }
 
-#login_button{
+#login{
         background-color: blue;
         padding-left: 10%;
         padding-right: 10%;
@@ -62,11 +62,11 @@ fieldset.login{
 
 #guest{
         background-color: pink;
+        padding: 5%;
         padding-left: 10%;
         padding-right: 10%;
         margin: 5px;
 }
-
 
 .span{
         display: inline;
