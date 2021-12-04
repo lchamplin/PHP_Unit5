@@ -105,7 +105,7 @@ findItems();
 
 function findItems() {
         arr = getCookie("itemsViewed");
-	if(arr.length>1){
+	if(arr.length>2){
 		ul = document.createElement('ul');
 		document.getElementById('offers').appendChild(ul);
 		for (let i = 0; i < arr.length-1; i++){
