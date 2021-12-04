@@ -34,12 +34,12 @@
     <legend>Product</legend>
                 <br>
       
-                <select id="product" name="product" required onchange="showImage(); addToCookie($row['product_name'])">
+                <select id="product" name="product" required onchange="showImage()">
                         <option disabled selected hidden>Choose a product *</option>
                         <?php $Product = getProducts(getConnection()); ?>
                         <?php if ($Product): ?>
                         <?php foreach($Product as $row): ?>
-                                <option value = <?= $row['id']?> data-image="<?= $row['image_name'] ?>" data-qty="<?= $row['in_stock'] ?>" <?php if($row['inactive']==1){ echo "disabled"; } ?> > <?= $row['product_name'] ?> - <?= $row['price'] ?> </option>
+                                <option value = <?= $row['id']?> data-name="<?= $row['product_name'] ?>" data-image="<?= $row['image_name'] ?>" data-qty="<?= $row['in_stock'] ?>" <?php if($row['inactive']==1){ echo "disabled"; } ?> > <?= $row['product_name'] ?> - <?= $row['price'] ?> </option>
                         <?php endforeach?>
                         <?php endif?>
                         </select>
@@ -91,7 +91,8 @@
                 else{
                         $('#stock_text').text("");
                         $('#submit').prop("disabled",false);
-                        }
+                }
+                addToCookie($("#product option:selected").attr('data-name'))
         }
         // get the itemsViewed cookie. This will hold the list of items the user has viewed. NOTE: be sure you read about JSON parse etc. in the background info.
         // if the currently selected item is not in the array, add it (see links in assignment writeup related to JS arrays)
