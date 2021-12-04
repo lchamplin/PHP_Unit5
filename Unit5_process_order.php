@@ -93,11 +93,7 @@ if ($newCust==0) {
 </section>
 <p>We will send special offers to <?php echo $_POST['email']?><p>
 
-<!-- <p>Thank you for your order, <?php echo $_POST["fname"]; ?> <?php echo $_POST["lname"]; ?> (<?php echo $_POST["email"]; ?>). </p>
-<p>You have selected <?php echo $_POST["quantity"]; ?>  <?php echo $product;?> @ $<?php echo $price;?></p>
-<p>Subtotal: $<?php echo $subtotal;?></p>
-<p>Total including tax (3%): $<?php echo $tax_price;?></p>
-<p><?php echo $donation ?></p> -->
+<div id="offers"></div>
 
 </body>
 </html>
@@ -109,7 +105,15 @@ findItems();
 
 function findItems() {
         arr = getCookie("itemsViewed");
-	console.log(arr);
+	if(arr.length()>1){
+		ul = document.createElement('ul');
+		document.getElementById('offers').appendChild(ul);
+		items.forEach(function (item) {
+    			let li = document.createElement('li');
+    			ul.appendChild(li);
+    			li.innerHTML += item;
+		});
+	}
 }
 
 function getCookie(name) {
