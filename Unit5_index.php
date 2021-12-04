@@ -11,8 +11,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
-<body onload="checkErr()">
-<p id="message">Welcome! Please login or select Continue as Guest to begin.</p> 
+<body>
+<p>Welcome! Please login or select Continue as Guest to begin. <?php echo $_GET['err']?></p> 
 <form action="Unit5_login.php" method="post">
 
 <fieldset class="login">
@@ -35,13 +35,5 @@
  <?php include 'Unit5_footer.php';?>
 
 <script>
-        function checkErr(){
-                error = $_GET['err'];
-                console.log(error);
-                if(error){
-                        $("#message").innerHTML+=("      "+error);
-                }
-
-        }
 
 </script>
