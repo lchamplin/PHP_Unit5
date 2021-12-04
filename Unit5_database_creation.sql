@@ -38,7 +38,7 @@ CREATE TABLE Orders (
 INSERT INTO Customer (first_name, last_name, email) VALUES('Mickey', 'Mouse', 'mmouse@mines.edu');
 INSERT INTO Customer (first_name, last_name, email) VALUES('Jordan', 'Ratliff', 'cwiggl3s@gmail.com');
 
-INSERT INTO Product (product_name, image_name, price, in_stock, inactive) VALUES('Gummy Bears', 'gummy_bears.jpg', 5, 0, 1);
+INSERT INTO Product (product_name, image_name, price, in_stock, inactive) VALUES('Gummy Bears', 'gummy_bears.jpg', 5, 0, 0);
 INSERT INTO Product (product_name, image_name, price, in_stock, inactive) VALUES('Chocolates', 'chocolates.jpg', 3, 3, 0);
 INSERT INTO Product (product_name, image_name, price, in_stock, inactive) VALUES('Caramels', 'caramels.jpg', 8, 32, 0);
 
