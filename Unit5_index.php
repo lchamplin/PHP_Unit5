@@ -16,6 +16,10 @@
 </header>
 <p>Welcome! Please login or select Continue as Guest to begin.</p>
 <?php 
+// Start the session
+session_start();
+// Init session variables
+$_SESSION["role"] = 0;
 if(isset($_GET['err'])){
         echo "<p style='color:red'>" . $_GET['err'] . "</p>";
 }
