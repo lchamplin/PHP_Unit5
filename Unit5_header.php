@@ -21,7 +21,7 @@ if($role != 0){
         ?></p>
 </header>
 <nav>
-        <ul class="topnav">
+        <div class="topnav">
                 <!-- <a href="Unit5_store.php">Store</a>
                 <a href="Unit5_order_entry.php">Order Entry</a>
                 <a href="Unit5_adminProduct.php">Products</a>
@@ -50,7 +50,7 @@ if($role != 0){
                         echo "<a style = 'float:right' href='Unit5_logout.php'>Logout</a>";  
                 }
                 ?>
-        </ul>
+        </div>
         <br>
 </nav>
 

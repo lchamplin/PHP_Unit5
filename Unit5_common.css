@@ -47,7 +47,7 @@ a{
 }
       
 .topnav a:hover {
-        /* background-color: goldenrod; */
+        background-color: goldenrod;
 }
       
 .topnav a.active {
