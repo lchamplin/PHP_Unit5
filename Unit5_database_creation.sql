@@ -3,6 +3,7 @@ use f21_lchamplin;
 DROP TABLE IF EXISTS Orders;
 DROP TABLE IF EXISTS Customer;
 DROP TABLE IF EXISTS Product;
+DROP TABLE IF EXISTS Users;
 
 CREATE TABLE Customer (
     id int AUTO_INCREMENT,
@@ -41,7 +42,7 @@ CREATE TABLE Users (
     last_name varchar(255),
     password varchar(255),
     email varchar(255),
-    role int, --1: customer service, 2: admin
+    role int,
     PRIMARY KEY (id)
 );
 

@@ -15,7 +15,7 @@
 <p>Welcome! Please login or select Continue as Guest to begin.</p>
 <?php 
 if(isset($_GET['err'])){
-        echo "<p>" . $_GET['err'] . "</p>";
+        echo "<p style='color:red'>" . $_GET['err'] . "</p>";
 }
 ?> 
 <form action="Unit5_login.php" method="post">
