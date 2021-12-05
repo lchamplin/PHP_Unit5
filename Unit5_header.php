@@ -1,4 +1,7 @@
-
+<?php
+                // Start the session
+                session_start();
+                ?>
 <head>
 	<title>PHP Header</title>
 	<meta charset="UTF-8">
@@ -8,6 +11,14 @@
 </head>
 <header id="header"> 
 <h1>Candy Shop</h1>
+<p>
+<?php 
+$role = $_SESSION["role"];
+if($role != 0){
+        echo "Welcome " . $_SESSION["name"];
+}
+        
+        ?></p>
 </header>
 <nav>
         <ul class="topnav">
@@ -16,11 +27,9 @@
                 <a href="Unit5_adminProduct.php">Products</a>
                 <a id="admin" href="Unit5_admin.php">Admin</a> -->
                 <?php
-                // Start the session
-                session_start();
-                // Init session variables
+                // get session variables
                 $role = $_SESSION["role"];
-                echo $role;
+
                 if($role == 0){
                         echo "<a href='Unit5_index.php'>Home</a>"; 
                         echo "<a href='Unit5_store.php'>Store</a>"; 

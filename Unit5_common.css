@@ -23,7 +23,7 @@ a{
 }
 
 .topnav {
-        background-color: gold;
+        /* background-color: gold; */
         width: 100%;
         align-content: flex-start;
         height: fit-content;
