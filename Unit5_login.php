@@ -26,7 +26,7 @@ if ($user['role']==1){
 }
 if ($user['role']==2){
         $_SESSION["role"] = 2;
-        header("Location: Unit5_admintProduct.php");
+        header("Location: Unit5_adminProduct.php");
 }
 
 

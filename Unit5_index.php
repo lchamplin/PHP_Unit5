@@ -1,4 +1,3 @@
- <?php include 'Unit5_header.php';?>
 <?php include 'Unit5_database.php';?>
 
 
@@ -12,6 +11,9 @@
 
 </head>
 <body>
+<header id="header"> 
+<h1>Candy Shop</h1>
+</header>
 <p>Welcome! Please login or select Continue as Guest to begin.</p>
 <?php 
 if(isset($_GET['err'])){
