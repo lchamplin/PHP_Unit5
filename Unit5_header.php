@@ -20,6 +20,7 @@
                 session_start();
                 // Init session variables
                 $role = $_SESSION["role"];
+                console.log($role);
                 if($role == 0){
                         echo "<li style = 'float:right'><a href='Unit5_index.php'>Home</a></li>"; 
                         echo "<li style = 'float:right'><a href='Unit5_store.php'>Store</a></li>"; 
