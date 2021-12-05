@@ -26,7 +26,7 @@ return $result;
 function findUser($conn, $email, $password) {
         $query = "select * from Users where email = ? and password = ?";
         $stmt = $conn->prepare( $query );
-        $stmt->bind_param("i", $productId);
+        $stmt->bind_param("ss", $email, $password);
         $stmt->execute();
         $result = $stmt->get_result(); // get the mysqli result
         if ($result->num_rows > 0) {
