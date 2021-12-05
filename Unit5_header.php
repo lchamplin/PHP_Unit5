@@ -20,25 +20,25 @@
                 session_start();
                 // Init session variables
                 $role = $_SESSION["role"];
-                console.log($role);
+                echo $role;
                 if($role == 0){
-                        echo "<li style = 'float:right'><a href='Unit5_index.php'>Home</a></li>"; 
-                        echo "<li style = 'float:right'><a href='Unit5_store.php'>Store</a></li>"; 
-                        echo "<li style = 'float:right'><a href='Unit5_logout.php'>Logout</a></li>";   
+                        echo "<a href='Unit5_index.php'>Home</a>"; 
+                        echo "<a href='Unit5_store.php'>Store</a>"; 
+                        echo "<a style = 'float:right'  href='Unit5_logout.php'>Logout</a>";   
                 }
                 if($role == 1){
-                        echo "<li style = 'float:right'><a href='Unit5_index.php'>Home</a></li>"; 
-                        echo "<li style = 'float:right'><a href='Unit5_order_entry.php'>Order Entry</a></li>"; 
-                        echo "<li style = 'float:right'><a href='Unit5_admin.php'>Admin</a></li>"; 
-                        echo "<li style = 'float:right'><a href='Unit5_logout.php'>Logout</a></li>";   
+                        echo "<a href='Unit5_index.php'>Home</a><"; 
+                        echo "<a href='Unit5_order_entry.php'>Order Entry</a>"; 
+                        echo "<a href='Unit5_admin.php'>Admin</a>"; 
+                        echo "<a style = 'float:right' href='Unit5_logout.php'>Logout</a>";   
                 }
                 if($role == 2){
-                        echo "<li style = 'float:right'><a href='Unit5_index.php'>Home</a></li>"; 
-                        echo "<li style = 'float:right'><a href='Unit5_store.php'>Store</a></li>";
-                        echo "<li style = 'float:right'><a href='Unit5_order_entry.php'>Order Entry</a></li>"; 
-                        echo "<li style = 'float:right'><a href='Unit5_adminProduct.php'>Products</a></li>"; 
-                        echo "<li style = 'float:right'><a href='Unit5_admin.php'>Admin</a></li>"; 
-                        echo "<li style = 'float:right'><a href='Unit5_logout.php'>Logout</a></li>";  
+                        echo "<a href='Unit5_index.php'>Home</a>"; 
+                        echo "<a href='Unit5_store.php'>Store</a>";
+                        echo "<a href='Unit5_order_entry.php'>Order Entry</a>"; 
+                        echo "<a href='Unit5_adminProduct.php'>Products</a>"; 
+                        echo "<a href='Unit5_admin.php'>Admin</a>"; 
+                        echo "<a style = 'float:right' href='Unit5_logout.php'>Logout</a>";  
                 }
                 ?>
         </ul>
