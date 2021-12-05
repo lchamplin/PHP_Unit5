@@ -2,6 +2,19 @@
 <?php include 'Unit5_database.php';?>
 <?php date_default_timezone_set("America/Denver");?>
 
+<?php 
+
+// Start the session
+session_start();
+// Check if user is logged in
+if(!isset($_SESSION["role"])){
+        header("Location: Unit5_index.php?err=Must log in first");
+}
+if(intval($_SESSION["role"])<1){
+	header("Location: Unit5_index.php?err=You are not authorized for that page");
+}
+
+?>
 
 
 <html>

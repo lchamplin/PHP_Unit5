@@ -30,6 +30,7 @@ a{
 }
 
 .topnav a {
+        background-color: gold;
         float: left;
         display: block;
         color: hotpink;

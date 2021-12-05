@@ -19,7 +19,6 @@
 // Start the session
 session_start();
 // Init session variables
-$_SESSION["role"] = 0;
 $_SESSION["name"] = "";
 if(isset($_GET['err'])){
         echo "<p style='color:red'>" . $_GET['err'] . "</p>";

@@ -1,6 +1,7 @@
 <?php
                 // Start the session
-                session_start();
+                if (session_status() <> PHP_SESSION_ACTIVE) session_start();
+
                 ?>
 <head>
 	<title>PHP Header</title>
@@ -13,7 +14,12 @@
 <h1>Candy Shop</h1>
 <p>
 <?php 
-$role = $_SESSION["role"];
+if (!isset($_SESSION["role"])){
+   $role = 0;     
+}
+else{
+        $role = $_SESSION["role"];
+}
 if($role != 0){
         echo "Welcome " . $_SESSION["name"];
 }
